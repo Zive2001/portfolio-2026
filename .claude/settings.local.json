@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Select-String -Path \"C:\\\\Users\\\\Asus\\\\Downloads\\\\port-handoff\\\\port\\\\project\\\\portfolio.html\" -Pattern \"<!doctype|</html>|<section|<footer\")",
+      "Bash(Select-Object LineNumber, Line)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('proj1.gif'\\); print\\(img.size, img.mode\\)\")",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\Asus\\\\Downloads\\\\port-handoff\\\\port\\\\project\\\\uploads\\\\proj1.gif\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\))"
+    ]
+  }
+}

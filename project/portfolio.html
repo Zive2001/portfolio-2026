@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Supun Seneviratne — Developer & Digital Craftsman</title>
+<meta name="description" content="Freelance developer based in Colombo, Sri Lanka. Full-stack, cloud-aware, design-led. Web apps, brand sites, cloud rescue ops." />
+<meta property="og:title" content="Supun Seneviratne — Developer & Digital Craftsman" />
+<meta property="og:description" content="Freelance developer based in Colombo, Sri Lanka. Full-stack, cloud-aware, design-led." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="uploads/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- ghost portrait — barely-there layer over hero -->
+<div class="ghost-portrait" aria-hidden="true">
+  <img src="assets/portrait.jpeg" alt="" />
+</div>
+
+<!-- noise / grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- progress bar -->
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- top nav -->
+<header class="nav">
+  <div class="nav-mark">
+    <span class="nav-avatar"><img src="assets/portrait.jpeg" alt="Supun" /></span>
+    <span class="mono">supun.s</span>
+  </div>
+  <nav class="nav-links mono" aria-label="Main navigation">
+    <a href="#work">work</a>
+    <a href="#about">about</a>
+    <a href="#process">process</a>
+    <a href="#services">services</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <a class="nav-cta mono" href="#contact">
+    <span class="ping" aria-hidden="true"></span>available for hire
+  </a>
+</header>
+
+<!-- sticky section label rail -->
+<aside class="rail mono" aria-hidden="true">
+  <span class="rail-num" id="rail-num">00</span>
+  <span class="rail-sep">/</span>
+  <span class="rail-label" id="rail-label">index</span>
+</aside>
+
+<main>
+
+<!-- ============================================================ -->
+<!-- HERO                                                         -->
+<!-- ============================================================ -->
+<section class="hero" id="hero" data-section="00" data-label="index">
+  <div class="hero-pin">
+    <div class="hero-meta mono">
+      <div><span class="dim">[ 06.79°N, 79.86°E ]</span></div>
+      <div><span class="dim">colombo · sri lanka</span></div>
+    </div>
+
+    <div class="hero-stage">
+      <div class="hero-eyebrow mono">
+        <span class="hero-eyebrow-line" aria-hidden="true"></span>
+        <span>a freelance practice</span>
+        <span class="hero-eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <div class="hero-line line-1">
+        <span class="word">FREE</span>
+        <span class="word italic">mind<span class="dot-green">.</span></span>
+      </div>
+      <div class="hero-line line-2">
+        <span class="word italic">built</span>
+        <span class="word">IN</span>
+        <span class="word accent">CODE</span>
+      </div>
+      <div class="hero-line line-3">
+        <span class="word">&amp;</span>
+        <span class="word italic">in the</span>
+        <span class="word">CLOUD<span class="dot-green">.</span></span>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="hero-foot-left mono">
+        <div class="dim">// currently</div>
+        <div>shipping web systems<br/>for humans who care</div>
+      </div>
+      <div class="hero-foot-mid mono">
+        <div class="hero-sig">
+          <span class="hero-sig-glyph" aria-hidden="true">◆</span>
+          <span class="hero-sig-text">
+            <span class="dim">est.</span> 2023<br/>
+            <span class="dim">based</span> colombo, lk
+          </span>
+        </div>
+      </div>
+      <div class="hero-foot-right mono">
+        <div class="scroll-hint" aria-hidden="true">
+          <span class="dim">scroll</span>
+          <span class="arrow">↓</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- HERO → STRIP BRIDGE                                          -->
+<!-- ============================================================ -->
+<div class="bridge" aria-hidden="true">
+  <div class="bridge-line"></div>
+  <div class="bridge-badge">
+    <span class="mono">full-stack · cloud · design</span>
+  </div>
+  <div class="bridge-line"></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- INTRO STRIP — disciplines marquee                            -->
+<!-- ============================================================ -->
+<section class="strip" aria-hidden="true">
+  <div class="marquee">
+    <div class="marquee-track icons" id="marquee-track">
+      <!-- set 1 -->
+      <span class="ic" title="React"><iconify-icon icon="simple-icons:react" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="TypeScript"><iconify-icon icon="simple-icons:typescript" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Node.js"><iconify-icon icon="simple-icons:nodedotjs" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Python"><iconify-icon icon="simple-icons:python" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Azure"><iconify-icon icon="simple-icons:microsoftazure" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Docker"><iconify-icon icon="simple-icons:docker" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="PostgreSQL"><iconify-icon icon="simple-icons:postgresql" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Tailwind CSS"><iconify-icon icon="simple-icons:tailwindcss" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Figma"><iconify-icon icon="simple-icons:figma" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Git"><iconify-icon icon="simple-icons:git" width="36" height="36"></iconify-icon></span>
+      <span class="ic" title="Astro"><iconify-icon icon="simple-icons:astro" width="36" height="36"></iconify-icon></span>
+      <!-- set 2 — duplicate for seamless loop -->
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:react" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:nextdotjs" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:typescript" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:nodedotjs" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:python" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:microsoftazure" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:docker" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:postgresql" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:tailwindcss" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:figma" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:git" width="36" height="36"></iconify-icon></span>
+      <span class="ic" aria-hidden="true"><iconify-icon icon="simple-icons:astro" width="36" height="36"></iconify-icon></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- ABOUT                                                        -->
+<!-- ============================================================ -->
+<section class="about" id="about" data-section="01" data-label="about">
+  <div class="section-head">
+    <div class="kicker mono">
+      <span class="kicker-num">01</span>
+      <span class="kicker-line" aria-hidden="true"></span>
+      <span>about / the human</span>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-prose">
+      <p class="reveal-lines" data-lines>
+        <span>I build the unglamorous web —</span>
+        <span>the dashboards, the portals, the things</span>
+        <span>that quietly save people <em>a hundred grand</em></span>
+        <span>and ten thousand clicks. Then I make them</span>
+        <span>actually <em>nice to look at</em>.</span>
+      </p>
+      <p class="reveal-lines about-prose-2" data-lines>
+        <span>Currently freelancing out of Colombo.</span>
+        <span>Full-stack, cloud-aware, design-led.</span>
+        <span>I take on small handfuls of projects per quarter</span>
+        <span>so each one gets the attention it deserves.</span>
+      </p>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-numrow">
+          <span class="stat-prefix">$</span><span class="stat-num" data-counter="400">0</span><span class="stat-suffix">K</span>
+        </div>
+        <div class="stat-label mono">cost saved through systems I built</div>
+      </div>
+      <div class="stat">
+        <div class="stat-numrow">
+          <span class="stat-num" data-counter="70">0</span><span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label mono">apps re-architected on Azure</div>
+      </div>
+      <div class="stat">
+        <div class="stat-numrow">
+          <span class="stat-num" data-counter="1">0</span><span class="stat-suffix">×</span>
+        </div>
+        <div class="stat-label mono">NBQSA bronze · national award</div>
+      </div>
+      <div class="stat">
+        <div class="stat-numrow">
+          <span class="stat-num" data-counter="3">0</span><span class="stat-suffix">yrs</span>
+        </div>
+        <div class="stat-label mono">shipping production software</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- WORK                                                         -->
+<!-- ============================================================ -->
+<section class="work" id="work" data-section="02" data-label="selected work">
+  <div class="work-head">
+    <div class="kicker mono">
+      <span class="kicker-num">02</span>
+      <span class="kicker-line" aria-hidden="true"></span>
+      <span>selected work / 2023 — 2026</span>
+    </div>
+    <div class="work-headline">
+      <h2 class="work-title">
+        Things I made.<br/>
+        <em>Some of them on purpose.</em>
+      </h2>
+      <div class="work-meta mono">
+        <div><span class="dim">showing</span> 06 / 12</div>
+        <div><span class="dim">filter</span> all</div>
+        <div><span class="dim">view</span> grid</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="work-grid">
+
+    <!-- Project 01 — feature -->
+    <a class="proj proj-feature" href="#" data-tilt>
+      <div class="proj-frame">
+        <div class="proj-tag mono">
+          <span class="proj-num">P / 01</span>
+          <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
+        </div>
+        <div class="proj-art proj-art-01" aria-hidden="true">
+          <div class="ph-stripes"></div>
+          <div class="ph-cross"></div>
+          <div class="ph-corner tl"></div>
+          <div class="ph-corner br"></div>
+          <div class="ph-center mono">[ project 01 — replace with screenshot ]</div>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-info-l">
+          <h3 class="proj-name">Project 01</h3>
+          <p class="proj-desc">Short one-line description of what this project does and who it was for. Keep it sharp.</p>
+        </div>
+        <div class="proj-info-r mono">
+          <div><span class="dim">year</span> 2025</div>
+          <div><span class="dim">role</span> design + dev</div>
+          <div><span class="dim">stack</span> tba</div>
+          <div class="proj-cta">view case ↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Project 02 — half -->
+    <a class="proj proj-half" href="#" data-tilt>
+      <div class="proj-frame">
+        <div class="proj-tag mono">
+          <span class="proj-num">P / 02</span>
+          <span class="proj-status">case study</span>
+        </div>
+        <div class="proj-art proj-art-02" aria-hidden="true">
+          <div class="ph-dots"></div>
+          <div class="ph-center mono">[ project 02 ]</div>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-info-l">
+          <h3 class="proj-name">Project 02</h3>
+          <p class="proj-desc">One-line description.</p>
+        </div>
+        <div class="proj-info-r mono">
+          <div><span class="dim">2024</span></div>
+          <div class="proj-cta">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Project 03 — half -->
+    <a class="proj proj-half" href="#" data-tilt>
+      <div class="proj-frame">
+        <div class="proj-tag mono">
+          <span class="proj-num">P / 03</span>
+          <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>award</span>
+        </div>
+        <div class="proj-art proj-art-03" aria-hidden="true">
+          <div class="ph-rings"></div>
+          <div class="ph-center mono">[ project 03 ]</div>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-info-l">
+          <h3 class="proj-name">Project 03</h3>
+          <p class="proj-desc">One-line description.</p>
+        </div>
+        <div class="proj-info-r mono">
+          <div><span class="dim">2024</span></div>
+          <div class="proj-cta">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Project 04 — third -->
+    <a class="proj proj-third" href="#" data-tilt>
+      <div class="proj-frame">
+        <div class="proj-tag mono">
+          <span class="proj-num">P / 04</span>
+        </div>
+        <div class="proj-art proj-art-04" aria-hidden="true">
+          <div class="ph-grid-mini"></div>
+          <div class="ph-center mono">[ project 04 ]</div>
+        </div>
+      </div>
+      <div class="proj-info compact">
+        <h3 class="proj-name">Project 04</h3>
+        <div class="proj-info-r mono"><span class="dim">2025</span><span class="proj-cta">↗</span></div>
+      </div>
+    </a>
+
+    <!-- Project 05 — third -->
+    <a class="proj proj-third proj-gif" href="https://www.j-certsrilanka.com/" target="_blank" rel="noopener noreferrer" data-tilt>
+      <div class="proj-frame">
+        <div class="proj-tag mono">
+          <span class="proj-num">P / 05</span>
+          <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
+        </div>
+        <div class="proj-art proj-art-05">
+          <img src="uploads/proj1.gif" alt="J-CERT Sri Lanka website demo" class="proj-screenshot" loading="lazy" decoding="async" />
+          <div class="ph-corner tl" aria-hidden="true"></div>
+          <div class="ph-corner br" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="proj-info compact">
+        <h3 class="proj-name">J-CERT Sri Lanka</h3>
+        <div class="proj-info-r mono"><span class="dim">2025</span><span class="proj-cta">↗</span></div>
+      </div>
+    </a>
+
+    <!-- Project 06 — third -->
+    <a class="proj proj-third" href="#" data-tilt>
+      <div class="proj-frame">
+        <div class="proj-tag mono">
+          <span class="proj-num">P / 06</span>
+        </div>
+        <div class="proj-art proj-art-06" aria-hidden="true">
+          <div class="ph-tri"></div>
+          <div class="ph-center mono">[ project 06 ]</div>
+        </div>
+      </div>
+      <div class="proj-info compact">
+        <h3 class="proj-name">Project 06</h3>
+        <div class="proj-info-r mono"><span class="dim">2026</span><span class="proj-cta">↗</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="work-footer">
+    <a href="#contact" class="btn-arrow btn-arrow-lg">
+      <span>got a project? let's talk</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="mono dim">// 06 of 12 shown · the rest is on request</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SKILLS                                                       -->
+<!-- ============================================================ -->
+<section class="skills" id="skills" data-section="03" data-label="stack">
+  <div class="section-head">
+    <div class="kicker mono">
+      <span class="kicker-num">03</span>
+      <span class="kicker-line" aria-hidden="true"></span>
+      <span>stack / tools of the trade</span>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skills-col">
+      <div class="skills-col-head mono">/ frontend</div>
+      <ul class="skills-list">
+        <li data-blurb="component systems, state, animation"><span>React</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="ssr · isr · routing · server actions"><span>Next.js</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="strict types or it didn't happen"><span>TypeScript</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="cssgrid > framework"><span>CSS / Tailwind</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="islands · static-first"><span>Astro</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+      </ul>
+    </div>
+    <div class="skills-col">
+      <div class="skills-col-head mono">/ backend</div>
+      <ul class="skills-list">
+        <li data-blurb="apis · queues · sockets"><span>Node.js</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="for the heavy lifting"><span>Java</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="postgres &amp; mysql · azure sql"><span>SQL</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="rest · graphql · realtime"><span>API design</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="scripts · data · ml"><span>Python</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+      </ul>
+    </div>
+    <div class="skills-col">
+      <div class="skills-col-head mono">/ cloud &amp; ops</div>
+      <ul class="skills-list">
+        <li data-blurb="governance · cost · networking"><span>Azure</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="pipelines that don't break fridays"><span>Azure DevOps</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="containerize the boring stuff"><span>Docker</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="trunk-based, opinionated"><span>Git</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="dashboards that get used"><span>Power BI</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+      </ul>
+    </div>
+    <div class="skills-col">
+      <div class="skills-col-head mono">/ extras</div>
+      <ul class="skills-list">
+        <li data-blurb="design-led, figma-fluent"><span>UI / UX</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="agentic flows · uipath"><span>Automation</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="apps · automate · dataverse"><span>Power Platform</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="websockets · server-sent events"><span>Realtime</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+        <li data-blurb="copy that doesn't suck"><span>Microcopy</span><span class="mono dim" aria-hidden="true">⇢</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PROCESS                                                      -->
+<!-- ============================================================ -->
+<section class="process" id="process" data-section="04" data-label="process">
+  <div class="section-head">
+    <div class="kicker mono">
+      <span class="kicker-num">04</span>
+      <span class="kicker-line" aria-hidden="true"></span>
+      <span>process / how this usually goes</span>
+    </div>
+  </div>
+
+  <div class="process-list">
+    <div class="step">
+      <div class="step-num" aria-hidden="true">01</div>
+      <div class="step-body">
+        <h4>We talk.</h4>
+        <p>30 minutes. No deck, no NDA theatre. I want to know what's <em>actually</em> broken and who feels it.</p>
+      </div>
+      <div class="step-meta mono">~30 min · free</div>
+    </div>
+    <div class="step">
+      <div class="step-num" aria-hidden="true">02</div>
+      <div class="step-body">
+        <h4>Tiny proposal.</h4>
+        <p>One page. Scope, milestones, fixed price or weekly retainer. You either nod or we walk away friends.</p>
+      </div>
+      <div class="step-meta mono">~3 days</div>
+    </div>
+    <div class="step">
+      <div class="step-num" aria-hidden="true">03</div>
+      <div class="step-body">
+        <h4>Design + build, in public.</h4>
+        <p>Live preview link from day one. Slack, Discord, smoke signals — pick a channel. You see every brushstroke.</p>
+      </div>
+      <div class="step-meta mono">2 — 8 weeks</div>
+    </div>
+    <div class="step">
+      <div class="step-num" aria-hidden="true">04</div>
+      <div class="step-body">
+        <h4>Ship. Then keep shipping.</h4>
+        <p>Production deploy, handover docs, optional retainer for the inevitable "one more thing." I don't disappear.</p>
+      </div>
+      <div class="step-meta mono">forever, ish</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICES                                                     -->
+<!-- ============================================================ -->
+<section class="services" id="services" data-section="05" data-label="services">
+  <div class="section-head">
+    <div class="kicker mono">
+      <span class="kicker-num">05</span>
+      <span class="kicker-line" aria-hidden="true"></span>
+      <span>services / things you can hire me for</span>
+    </div>
+  </div>
+
+  <div class="services-grid">
+    <div class="service" data-tilt>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16"/><circle cx="20" cy="20" r="8"/></svg>
+      </div>
+      <h4>Web apps that earn their keep</h4>
+      <p>Internal tools, dashboards, portals — the unsexy software companies actually run on.</p>
+      <div class="service-foot mono">react · next · node · sql</div>
+    </div>
+    <div class="service" data-tilt>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><rect x="4" y="4" width="32" height="32"/><rect x="12" y="12" width="16" height="16"/></svg>
+      </div>
+      <h4>Brand &amp; portfolio sites</h4>
+      <p>Editorial, scroll-driven, opinionated. For studios, photographers, founders who want a site that actually looks like them.</p>
+      <div class="service-foot mono">astro · gsap · headless cms</div>
+    </div>
+    <div class="service" data-tilt>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M4 28 L20 8 L36 28 Z"/><path d="M12 28 L20 18 L28 28 Z"/></svg>
+      </div>
+      <h4>Cloud rescue ops</h4>
+      <p>Inheriting an Azure bill that hurts? I diagnose, refactor, and right-size. SQL pools, networking, CI/CD pipelines.</p>
+      <div class="service-foot mono">azure · devops · postgres</div>
+    </div>
+    <div class="service" data-tilt>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><circle cx="14" cy="14" r="6"/><circle cx="26" cy="26" r="6"/><line x1="14" y1="14" x2="26" y2="26"/></svg>
+      </div>
+      <h4>Automation &amp; integrations</h4>
+      <p>Power Automate, UiPath, custom scripts. Take the repetitive 4-hour task and turn it into a 4-second one.</p>
+      <div class="service-foot mono">power platform · uipath</div>
+    </div>
+    <div class="service" data-tilt>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><polygon points="20,4 36,14 30,32 10,32 4,14"/></svg>
+      </div>
+      <h4>Design-engineer pairings</h4>
+      <p>Working with a designer? I turn Figma into pixel-honest, animation-rich React. Or skip the designer — I do that too.</p>
+      <div class="service-foot mono">figma · react · motion</div>
+    </div>
+    <div class="service" data-tilt>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M8 20 Q20 4 32 20 Q20 36 8 20 Z"/><circle cx="20" cy="20" r="4"/></svg>
+      </div>
+      <h4>Tech-lead-for-hire</h4>
+      <p>Small team without a senior? I'll review PRs, set conventions, mentor your juniors, and untangle architectural knots.</p>
+      <div class="service-foot mono">retainer · weekly</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AWARDS                                                       -->
+<!-- ============================================================ -->
+<section class="awards" id="awards" data-section="06" data-label="awards">
+  <div class="section-head">
+    <div class="kicker mono">
+      <span class="kicker-num">06</span>
+      <span class="kicker-line" aria-hidden="true"></span>
+      <span>awards / certificates of nice things</span>
+    </div>
+  </div>
+
+  <ul class="awards-list">
+    <li class="award-row">
+      <div class="award-year mono">2024</div>
+      <div class="award-title">NBQSA — Bronze</div>
+      <div class="award-meta mono">National software · Hoshin Portal</div>
+      <div class="award-mark" aria-label="Gold star">★</div>
+    </li>
+    <li class="award-row">
+      <div class="award-year mono">2024</div>
+      <div class="award-title">National Quality Circle — Gold</div>
+      <div class="award-meta mono">Team Smart Solution · One Base for FGW</div>
+      <div class="award-mark" aria-label="Gold star">★</div>
+    </li>
+    <li class="award-row">
+      <div class="award-year mono">2023</div>
+      <div class="award-title">MAS Future Stars — Gold</div>
+      <div class="award-meta mono">Innovation across the manufacturing group</div>
+      <div class="award-mark" aria-label="Gold star">★</div>
+    </li>
+    <li class="award-row">
+      <div class="award-year mono">2023</div>
+      <div class="award-title">SLIIT Mini-Hackathon — Finalist</div>
+      <div class="award-meta mono">Health Connect</div>
+      <div class="award-mark" aria-label="Star">☆</div>
+    </li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- CONTACT                                                      -->
+<!-- ============================================================ -->
+<section class="contact" id="contact" data-section="07" data-label="contact">
+  <div class="contact-stage">
+    <div class="contact-kicker mono">
+      <span class="ping" aria-hidden="true"></span>
+      <span>booking · q3 — q4 — 2026</span>
+    </div>
+    <h2 class="contact-title">
+      Let's make<br/>
+      <em>something obnoxiously good</em><br/>
+      together.
+    </h2>
+
+    <a class="mailto" href="mailto:supunseneviratne@gmail.com">
+      <span class="mailto-text">supunseneviratne@gmail.com</span>
+      <span class="mailto-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <div class="contact-grid">
+      <a href="mailto:supunseneviratne@gmail.com" class="contact-cell">
+        <div class="contact-cell-label mono">/ email</div>
+        <div class="contact-cell-value">supunseneviratne@<br/>gmail.com</div>
+      </a>
+      <a href="https://www.linkedin.com/in/supun-seneviratne-a9331125b/" target="_blank" rel="noopener noreferrer" class="contact-cell">
+        <div class="contact-cell-label mono">/ linkedin</div>
+        <div class="contact-cell-value">/in/supun-<br/>seneviratne</div>
+      </a>
+      <a href="tel:+94703247645" class="contact-cell">
+        <div class="contact-cell-label mono">/ phone</div>
+        <div class="contact-cell-value">+94 70 324<br/>76 45</div>
+      </a>
+      <a href="https://github.com/supun-s" target="_blank" rel="noopener noreferrer" class="contact-cell">
+        <div class="contact-cell-label mono">/ github</div>
+        <div class="contact-cell-value">@supun-s<br/><span class="dim">(soon™)</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-row mono">
+    <div>© 2026 Supun Seneviratne — all the pixels reserved</div>
+    <div class="dim">designed &amp; coded with ◾ in colombo</div>
+    <div><a href="#hero">↑ back to top</a></div>
+  </div>
+  <div class="foot-mega" aria-hidden="true">SUPUN.</div>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
