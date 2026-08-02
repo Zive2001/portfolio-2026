@@ -5,7 +5,28 @@
       "Bash(Select-Object LineNumber, Line)",
       "Bash(Format-Table -AutoSize)",
       "Bash(python3 -c \"from PIL import Image; img = Image.open\\('proj1.gif'\\); print\\(img.size, img.mode\\)\")",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\Asus\\\\Downloads\\\\port-handoff\\\\port\\\\project\\\\uploads\\\\proj1.gif\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\))"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\Asus\\\\Downloads\\\\port-handoff\\\\port\\\\project\\\\uploads\\\\proj1.gif\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "Bash(git -C \"c:/Users/Asus/Downloads/port-handoff/port\" log -3 -p -- '*proj*')",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(awk '/<div class=\"work-grid\">/,/<\\\\/div>\\\\s*$/' portfolio.html)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node verify.js)",
+      "Bash(chromium-cli --help)",
+      "Bash(bash -lc 'type chromium-cli 2>&1; command -v chromium-cli 2>&1; find / -maxdepth 6 -iname \"*chromium-cli*\" 2>/dev/null | head -20')",
+      "Bash(npx --version)",
+      "Bash(npm ls *)",
+      "Read(//c//**)",
+      "Read(//c/Users/Asus/**)",
+      "Read(//c/Users/Asus/.claude/**)",
+      "PowerShell(Start-Process \"http://localhost:8934/index.html#work\")",
+      "Bash(mkdir -p /c/Users/Asus/AppData/Local/Temp/claude/c--Users-Asus-Downloads-port-handoff-port/68da50c2-f6b7-49e3-8a7c-c4f5f8a30176/scratchpad)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --screenshot=\"/c/Users/Asus/AppData/Local/Temp/claude/c--Users-Asus-Downloads-port-handoff-port/68da50c2-f6b7-49e3-8a7c-c4f5f8a30176/scratchpad/work-section.png\" --window-size=1600,3200 --hide-scrollbars --virtual-time-budget=3000 \"http://localhost:8934/index.html\")",
+      "Read(//c/Users/Asus/AppData/Local/Temp/claude/c--Users-Asus-Downloads-port-handoff-port/68da50c2-f6b7-49e3-8a7c-c4f5f8a30176/scratchpad/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --screenshot=\"/c/Users/Asus/AppData/Local/Temp/claude/c--Users-Asus-Downloads-port-handoff-port/68da50c2-f6b7-49e3-8a7c-c4f5f8a30176/scratchpad/work-section2.png\" --window-size=1600,2400 --hide-scrollbars --virtual-time-budget=4000 \"http://localhost:8934/index.html#work\")",
+      "Bash(start \"\" \"c:\\\\Users\\\\Asus\\\\Downloads\\\\port-handoff\\\\port\\\\project\\\\index.html\")"
     ]
   }
 }

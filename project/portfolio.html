@@ -233,8 +233,14 @@
         <em>Some of them on purpose.</em>
       </h2>
       <div class="work-meta mono">
-        <div><span class="dim">showing</span> 06 / 12</div>
-        <div><span class="dim">filter</span> all</div>
+        <div><span class="dim">showing</span> <span id="work-count">5</span> / 5</div>
+        <div class="work-filter" role="group" aria-label="Filter projects by category">
+          <span class="dim">filter</span>
+          <button type="button" class="filter-btn is-active" data-filter="all">all</button>
+          <button type="button" class="filter-btn" data-filter="live">live</button>
+          <button type="button" class="filter-btn" data-filter="open-source">open source</button>
+          <button type="button" class="filter-btn" data-filter="case-study">case study</button>
+        </div>
         <div><span class="dim">view</span> grid</div>
       </div>
     </div>
@@ -243,79 +249,90 @@
   <div class="work-grid">
 
     <!-- Project 01 — feature -->
-    <a class="proj proj-feature" href="#" data-tilt>
+    <button type="button" class="proj proj-feature" data-modal-open="azure-case-modal" aria-haspopup="dialog" data-tilt>
       <div class="proj-frame">
         <div class="proj-tag mono">
           <span class="proj-num">P / 01</span>
-          <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
+          <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>case study</span>
         </div>
         <div class="proj-art proj-art-01" aria-hidden="true">
           <div class="ph-stripes"></div>
           <div class="ph-cross"></div>
           <div class="ph-corner tl"></div>
           <div class="ph-corner br"></div>
-          <div class="ph-center mono">[ project 01 — replace with screenshot ]</div>
         </div>
       </div>
       <div class="proj-info">
         <div class="proj-info-l">
-          <h3 class="proj-name">Project 01</h3>
-          <p class="proj-desc">Short one-line description of what this project does and who it was for. Keep it sharp.</p>
+          <h3 class="proj-name">Azure Cost Rescue</h3>
+          <p class="proj-desc">Inherited an over-provisioned enterprise Azure tenant with no cost governance. Diagnosed with Cost Management, right-sized SQL pools, refactored networking, and tightened the CI/CD pipeline — cut monthly spend ~59%.</p>
+          <div class="proj-stack" aria-label="Tech stack">
+            <span class="proj-stack-icon" title="Microsoft Azure"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure</span></span>
+            <span class="proj-stack-icon" title="Azure DevOps"><iconify-icon icon="simple-icons:azuredevops" width="14" height="14"></iconify-icon><span>Azure DevOps</span></span>
+            <span class="proj-stack-icon" title="Docker"><iconify-icon icon="simple-icons:docker" width="14" height="14"></iconify-icon><span>Docker</span></span>
+            <span class="proj-stack-icon" title="SQL"><iconify-icon icon="simple-icons:microsoftsqlserver" width="14" height="14"></iconify-icon><span>SQL</span></span>
+          </div>
         </div>
         <div class="proj-info-r mono">
           <div><span class="dim">year</span> 2025</div>
-          <div><span class="dim">role</span> design + dev</div>
-          <div><span class="dim">stack</span> tba</div>
-          <div class="proj-cta">view case ↗</div>
+          <div><span class="dim">role</span> cloud engineering</div>
+          <div><span class="dim">result</span> −59% monthly spend</div>
+          <div class="proj-cta">read case study ↗</div>
         </div>
       </div>
-    </a>
+    </button>
 
     <!-- Project 02 — half -->
-    <a class="proj proj-half" href="#" data-tilt>
+    <a class="proj proj-half" href="https://github.com/Zive2001/fluxbridge" target="_blank" rel="noopener noreferrer" data-tilt>
       <div class="proj-frame">
         <div class="proj-tag mono">
           <span class="proj-num">P / 02</span>
-          <span class="proj-status">case study</span>
+          <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>open source</span>
         </div>
         <div class="proj-art proj-art-02" aria-hidden="true">
           <div class="ph-dots"></div>
-          <div class="ph-center mono">[ project 02 ]</div>
         </div>
       </div>
-      <div class="proj-info">
+      <div class="proj-info proj-info-stack">
         <div class="proj-info-l">
-          <h3 class="proj-name">Project 02</h3>
-          <p class="proj-desc">One-line description.</p>
+          <h3 class="proj-name">Fluxbridge</h3>
+          <p class="proj-desc">Event-driven integration layer that syncs an ERP/SAP-style backend with downstream web apps. Idempotent message processing, retry with exponential backoff, a dead-letter queue, and a live observability dashboard for in-flight and failed events.</p>
+          <div class="proj-stack" aria-label="Tech stack">
+            <span class="proj-stack-icon" title="TypeScript"><iconify-icon icon="simple-icons:typescript" width="14" height="14"></iconify-icon><span>TypeScript</span></span>
+            <span class="proj-stack-icon" title="NestJS"><iconify-icon icon="simple-icons:nestjs" width="14" height="14"></iconify-icon><span>NestJS</span></span>
+            <span class="proj-stack-icon" title="PostgreSQL"><iconify-icon icon="simple-icons:postgresql" width="14" height="14"></iconify-icon><span>PostgreSQL</span></span>
+            <span class="proj-stack-icon" title="Azure Service Bus"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure Service Bus</span></span>
+            <span class="proj-stack-icon" title="Docker"><iconify-icon icon="simple-icons:docker" width="14" height="14"></iconify-icon><span>Docker</span></span>
+          </div>
         </div>
-        <div class="proj-info-r mono">
-          <div><span class="dim">2024</span></div>
-          <div class="proj-cta">↗</div>
-        </div>
+        <div class="proj-info-r mono"><span class="dim">2026</span><span class="proj-cta">↗</span></div>
       </div>
     </a>
 
     <!-- Project 03 — half -->
-    <a class="proj proj-half" href="#" data-tilt>
+    <a class="proj proj-half" href="https://github.com/Zive2001/pulse" target="_blank" rel="noopener noreferrer" data-tilt>
       <div class="proj-frame">
         <div class="proj-tag mono">
           <span class="proj-num">P / 03</span>
-          <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>award</span>
+          <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>open source</span>
         </div>
         <div class="proj-art proj-art-03" aria-hidden="true">
           <div class="ph-rings"></div>
-          <div class="ph-center mono">[ project 03 ]</div>
         </div>
       </div>
-      <div class="proj-info">
+      <div class="proj-info proj-info-stack">
         <div class="proj-info-l">
-          <h3 class="proj-name">Project 03</h3>
-          <p class="proj-desc">One-line description.</p>
+          <h3 class="proj-name">Pulse</h3>
+          <p class="proj-desc">Realtime logistics-ops dashboard — websocket-driven live status, background job workers, and a Redis-backed queue. Built to prove async: events in, workers process, clients update without a refresh.</p>
+          <div class="proj-stack" aria-label="Tech stack">
+            <span class="proj-stack-icon" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="14" height="14"></iconify-icon><span>Next.js</span></span>
+            <span class="proj-stack-icon" title="Node.js"><iconify-icon icon="simple-icons:nodedotjs" width="14" height="14"></iconify-icon><span>Node</span></span>
+            <span class="proj-stack-icon" title="Redis"><iconify-icon icon="simple-icons:redis" width="14" height="14"></iconify-icon><span>Redis</span></span>
+            <span class="proj-stack-icon" title="PostgreSQL"><iconify-icon icon="simple-icons:postgresql" width="14" height="14"></iconify-icon><span>PostgreSQL</span></span>
+            <span class="proj-stack-icon" title="Microsoft Azure"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure</span></span>
+          </div>
         </div>
-        <div class="proj-info-r mono">
-          <div><span class="dim">2024</span></div>
-          <div class="proj-cta">↗</div>
-        </div>
+        <div class="proj-info-r mono"><span class="dim">2026</span><span class="proj-cta">↗</span></div>
       </div>
     </a>
 
@@ -375,23 +392,6 @@
       </div>
     </a>
 
-    <!-- Project 06 — third -->
-    <a class="proj proj-third" href="#" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 06</span>
-        </div>
-        <div class="proj-art proj-art-06" aria-hidden="true">
-          <div class="ph-tri"></div>
-          <div class="ph-center mono">[ project 06 ]</div>
-        </div>
-      </div>
-      <div class="proj-info compact">
-        <h3 class="proj-name">Project 06</h3>
-        <div class="proj-info-r mono"><span class="dim">2026</span><span class="proj-cta">↗</span></div>
-      </div>
-    </a>
-
   </div>
 
   <div class="work-footer">
@@ -399,9 +399,31 @@
       <span>got a project? let's talk</span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <div class="mono dim">// 06 of 12 shown · the rest is on request</div>
+    <div class="mono dim">// all 5 shown</div>
   </div>
 </section>
+
+<!-- ============================================================ -->
+<!-- CASE STUDY MODAL — Azure Cost Rescue                         -->
+<!-- ============================================================ -->
+<dialog class="case-modal" id="azure-case-modal" aria-labelledby="azure-case-title">
+  <div class="case-modal-inner">
+    <button type="button" class="case-modal-close" data-modal-close aria-label="Close case study">×</button>
+    <div class="case-modal-tag mono dim">
+      <span>P / 01</span>
+      <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>case study</span>
+    </div>
+    <h3 id="azure-case-title" class="case-modal-title">Azure Cost Rescue</h3>
+    <p class="case-modal-desc">Inherited an over-provisioned enterprise Azure tenant with no cost governance. Diagnosed with Cost Management, right-sized SQL pools, refactored networking, and tightened the CI/CD pipeline — cut monthly spend ~59%.</p>
+    <div class="proj-stack" aria-label="Tech stack">
+      <span class="proj-stack-icon" title="Microsoft Azure"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure</span></span>
+      <span class="proj-stack-icon" title="Azure DevOps"><iconify-icon icon="simple-icons:azuredevops" width="14" height="14"></iconify-icon><span>Azure DevOps</span></span>
+      <span class="proj-stack-icon" title="Docker"><iconify-icon icon="simple-icons:docker" width="14" height="14"></iconify-icon><span>Docker</span></span>
+      <span class="proj-stack-icon" title="SQL"><iconify-icon icon="simple-icons:microsoftsqlserver" width="14" height="14"></iconify-icon><span>SQL</span></span>
+    </div>
+    <div class="case-modal-meta mono dim">2025 · cloud engineering · −59% monthly spend</div>
+  </div>
+</dialog>
 
 <!-- ============================================================ -->
 <!-- SKILLS                                                       -->

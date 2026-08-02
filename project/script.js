@@ -127,6 +127,64 @@
   $$('[data-counter]').forEach(el => counterIO.observe(el));
 
   /* ============================================================
+     Work grid — category filter + case-study modal
+     ============================================================ */
+  const workGrid  = $('.work-grid');
+  const projCards = workGrid ? $$('.proj', workGrid) : [];
+  const workCount = $('#work-count');
+  const filterBtns = $$('.filter-btn');
+
+  const categoryOf = (card) => {
+    if (card.querySelector('.proj-status .ping')) return 'live';
+    const status = (card.querySelector('.proj-status')?.textContent || '').trim().toLowerCase();
+    if (status.includes('open source')) return 'open-source';
+    if (status.includes('case study')) return 'case-study';
+    return 'other';
+  };
+
+  const applyFilter = (filter) => {
+    let shown = 0;
+    projCards.forEach(card => {
+      const match = filter === 'all' || categoryOf(card) === filter;
+      card.classList.toggle('is-hidden', !match);
+      if (match) shown++;
+    });
+    if (workCount) workCount.textContent = shown;
+  };
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+
+  /* case-study modal */
+  let lastModalTrigger = null;
+  $$('[data-modal-open]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const modal = document.getElementById(trigger.dataset.modalOpen);
+      if (!modal) return;
+      lastModalTrigger = trigger;
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  $$('[data-modal-close]').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('dialog')?.close());
+  });
+  $$('dialog.case-modal').forEach(dialog => {
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      document.body.style.overflow = '';
+      lastModalTrigger?.focus();
+    });
+  });
+
+  /* ============================================================
      Master scroll loop (rAF-batched)
      ============================================================ */
   let raf = 0;

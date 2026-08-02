@@ -233,8 +233,14 @@
         <em>Some of them on purpose.</em>
       </h2>
       <div class="work-meta mono">
-        <div><span class="dim">showing</span> 06 / 12</div>
-        <div><span class="dim">filter</span> all</div>
+        <div><span class="dim">showing</span> <span id="work-count">5</span> / 5</div>
+        <div class="work-filter" role="group" aria-label="Filter projects by category">
+          <span class="dim">filter</span>
+          <button type="button" class="filter-btn is-active" data-filter="all">all</button>
+          <button type="button" class="filter-btn" data-filter="live">live</button>
+          <button type="button" class="filter-btn" data-filter="open-source">open source</button>
+          <button type="button" class="filter-btn" data-filter="case-study">case study</button>
+        </div>
         <div><span class="dim">view</span> grid</div>
       </div>
     </div>
@@ -242,155 +248,153 @@
 
   <div class="work-grid">
 
-    <!-- Project 01 — feature -->
-    <a class="proj proj-feature" href="#" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 01</span>
-          <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
-        </div>
-        <div class="proj-art proj-art-01" aria-hidden="true">
-          <div class="ph-stripes"></div>
-          <div class="ph-cross"></div>
-          <div class="ph-corner tl"></div>
-          <div class="ph-corner br"></div>
-          <div class="ph-center mono">[ project 01 — replace with screenshot ]</div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-info-l">
-          <h3 class="proj-name">Project 01</h3>
-          <p class="proj-desc">Short one-line description of what this project does and who it was for. Keep it sharp.</p>
-        </div>
-        <div class="proj-info-r mono">
-          <div><span class="dim">year</span> 2025</div>
-          <div><span class="dim">role</span> design + dev</div>
-          <div><span class="dim">stack</span> tba</div>
-          <div class="proj-cta">view case ↗</div>
-        </div>
-      </div>
-    </a>
+    <!-- Case-study / backend projects — compact rows, no art frame -->
+    <div class="work-list">
 
-    <!-- Project 02 — half -->
-    <a class="proj proj-half" href="#" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 02</span>
-          <span class="proj-status">case study</span>
+      <!-- Project 01 -->
+      <button type="button" class="proj proj-row" data-modal-open="azure-case-modal" aria-haspopup="dialog">
+        <div class="proj-row-top mono">
+          <span class="proj-row-id">
+            <span class="proj-num">P / 01</span>
+            <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>case study</span>
+          </span>
+          <span class="dim">2025</span>
         </div>
-        <div class="proj-art proj-art-02" aria-hidden="true">
-          <div class="ph-dots"></div>
-          <div class="ph-center mono">[ project 02 ]</div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-info-l">
-          <h3 class="proj-name">Project 02</h3>
-          <p class="proj-desc">One-line description.</p>
-        </div>
-        <div class="proj-info-r mono">
-          <div><span class="dim">2024</span></div>
-          <div class="proj-cta">↗</div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Project 03 — half -->
-    <a class="proj proj-half" href="#" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 03</span>
-          <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>award</span>
-        </div>
-        <div class="proj-art proj-art-03" aria-hidden="true">
-          <div class="ph-rings"></div>
-          <div class="ph-center mono">[ project 03 ]</div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-info-l">
-          <h3 class="proj-name">Project 03</h3>
-          <p class="proj-desc">One-line description.</p>
-        </div>
-        <div class="proj-info-r mono">
-          <div><span class="dim">2024</span></div>
-          <div class="proj-cta">↗</div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Project 04 — third -->
-    <a class="proj proj-third proj-gif" href="https://serenityuk.netlify.app/" target="_blank" rel="noopener noreferrer" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 04</span>
-          <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
-        </div>
-        <div class="proj-art proj-art-04">
-          <img src="uploads/proj2.gif" alt="Serenity wellness app marketing site demo" class="proj-screenshot" loading="lazy" decoding="async" />
-          <div class="ph-corner tl" aria-hidden="true"></div>
-          <div class="ph-corner br" aria-hidden="true"></div>
-        </div>
-      </div>
-      <div class="proj-info proj-info-stack">
-        <div class="proj-info-l">
-          <h3 class="proj-name">Serenity</h3>
-          <p class="proj-desc">Mobile app launch campaign for a mindfulness &amp; wellness platform — scroll-driven marketing site built to drive downloads.</p>
+        <h3 class="proj-name">Azure Cost Rescue</h3>
+        <p class="proj-desc">Inherited an over-provisioned enterprise Azure tenant with no cost governance. Diagnosed with Cost Management, right-sized SQL pools, refactored networking, and tightened the CI/CD pipeline — cut monthly spend ~59%.</p>
+        <div class="proj-row-foot">
           <div class="proj-stack" aria-label="Tech stack">
-            <span class="proj-stack-icon" title="React"><iconify-icon icon="simple-icons:react" width="14" height="14"></iconify-icon><span>React</span></span>
-            <span class="proj-stack-icon" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="14" height="14"></iconify-icon><span>Next.js</span></span>
-            <span class="proj-stack-icon" title="Tailwind CSS"><iconify-icon icon="simple-icons:tailwindcss" width="14" height="14"></iconify-icon><span>Tailwind</span></span>
-            <span class="proj-stack-icon" title="Figma"><iconify-icon icon="simple-icons:figma" width="14" height="14"></iconify-icon><span>Figma</span></span>
+            <span class="proj-stack-icon" title="Microsoft Azure"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure</span></span>
+            <span class="proj-stack-icon" title="Azure DevOps"><iconify-icon icon="simple-icons:azuredevops" width="14" height="14"></iconify-icon><span>Azure DevOps</span></span>
+            <span class="proj-stack-icon" title="Docker"><iconify-icon icon="simple-icons:docker" width="14" height="14"></iconify-icon><span>Docker</span></span>
+            <span class="proj-stack-icon" title="SQL"><iconify-icon icon="simple-icons:microsoftsqlserver" width="14" height="14"></iconify-icon><span>SQL</span></span>
+          </div>
+          <div class="proj-row-cta mono">
+            <span class="proj-result"><span class="dim">result</span> −59% monthly spend</span>
+            <span class="proj-cta">read case study ↗</span>
           </div>
         </div>
-        <div class="proj-info-r mono"><span class="dim">2025</span><span class="proj-cta">↗</span></div>
-      </div>
-    </a>
+      </button>
 
-    <!-- Project 05 — third -->
-    <a class="proj proj-third proj-gif" href="https://www.j-certsrilanka.com/" target="_blank" rel="noopener noreferrer" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 05</span>
-          <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
+      <!-- Project 02 -->
+      <a class="proj proj-row" href="https://github.com/Zive2001/fluxbridge" target="_blank" rel="noopener noreferrer">
+        <div class="proj-row-top mono">
+          <span class="proj-row-id">
+            <span class="proj-num">P / 02</span>
+            <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>open source</span>
+          </span>
+          <span class="dim">2026</span>
         </div>
-        <div class="proj-art proj-art-05">
-          <img src="uploads/proj1.gif" alt="J-CERT Sri Lanka website demo" class="proj-screenshot" loading="lazy" decoding="async" />
-          <div class="ph-corner tl" aria-hidden="true"></div>
-          <div class="ph-corner br" aria-hidden="true"></div>
-        </div>
-      </div>
-      <div class="proj-info proj-info-stack">
-        <div class="proj-info-l">
-          <h3 class="proj-name">J-CERT Sri Lanka</h3>
-          <p class="proj-desc">Official Sri Lanka portal for Japan's J-CERT professional certification exam — registration, resources &amp; results.</p>
+        <h3 class="proj-name">Fluxbridge</h3>
+        <p class="proj-desc">Event-driven integration layer that syncs an ERP/SAP-style backend with downstream web apps. Idempotent message processing, retry with exponential backoff, a dead-letter queue, and a live observability dashboard for in-flight and failed events.</p>
+        <div class="proj-row-foot">
           <div class="proj-stack" aria-label="Tech stack">
-            <span class="proj-stack-icon" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="14" height="14"></iconify-icon><span>Next.js</span></span>
             <span class="proj-stack-icon" title="TypeScript"><iconify-icon icon="simple-icons:typescript" width="14" height="14"></iconify-icon><span>TypeScript</span></span>
-            <span class="proj-stack-icon" title="Tailwind CSS"><iconify-icon icon="simple-icons:tailwindcss" width="14" height="14"></iconify-icon><span>Tailwind</span></span>
+            <span class="proj-stack-icon" title="NestJS"><iconify-icon icon="simple-icons:nestjs" width="14" height="14"></iconify-icon><span>NestJS</span></span>
             <span class="proj-stack-icon" title="PostgreSQL"><iconify-icon icon="simple-icons:postgresql" width="14" height="14"></iconify-icon><span>PostgreSQL</span></span>
+            <span class="proj-stack-icon" title="Azure Service Bus"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure Service Bus</span></span>
+            <span class="proj-stack-icon" title="Docker"><iconify-icon icon="simple-icons:docker" width="14" height="14"></iconify-icon><span>Docker</span></span>
+          </div>
+          <div class="proj-row-cta mono">
+            <span class="proj-cta">view repo ↗</span>
           </div>
         </div>
-        <div class="proj-info-r mono"><span class="dim">2025</span><span class="proj-cta">↗</span></div>
-      </div>
-    </a>
+      </a>
 
-    <!-- Project 06 — third -->
-    <a class="proj proj-third" href="#" data-tilt>
-      <div class="proj-frame">
-        <div class="proj-tag mono">
-          <span class="proj-num">P / 06</span>
+      <!-- Project 03 -->
+      <a class="proj proj-row" href="https://github.com/Zive2001/pulse" target="_blank" rel="noopener noreferrer">
+        <div class="proj-row-top mono">
+          <span class="proj-row-id">
+            <span class="proj-num">P / 03</span>
+            <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>open source</span>
+          </span>
+          <span class="dim">2026</span>
         </div>
-        <div class="proj-art proj-art-06" aria-hidden="true">
-          <div class="ph-tri"></div>
-          <div class="ph-center mono">[ project 06 ]</div>
+        <h3 class="proj-name">Pulse</h3>
+        <p class="proj-desc">Realtime logistics-ops dashboard — websocket-driven live status, background job workers, and a Redis-backed queue. Built to prove async: events in, workers process, clients update without a refresh.</p>
+        <div class="proj-row-foot">
+          <div class="proj-stack" aria-label="Tech stack">
+            <span class="proj-stack-icon" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="14" height="14"></iconify-icon><span>Next.js</span></span>
+            <span class="proj-stack-icon" title="Node.js"><iconify-icon icon="simple-icons:nodedotjs" width="14" height="14"></iconify-icon><span>Node</span></span>
+            <span class="proj-stack-icon" title="Redis"><iconify-icon icon="simple-icons:redis" width="14" height="14"></iconify-icon><span>Redis</span></span>
+            <span class="proj-stack-icon" title="PostgreSQL"><iconify-icon icon="simple-icons:postgresql" width="14" height="14"></iconify-icon><span>PostgreSQL</span></span>
+            <span class="proj-stack-icon" title="Microsoft Azure"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure</span></span>
+          </div>
+          <div class="proj-row-cta mono">
+            <span class="proj-cta">view repo ↗</span>
+          </div>
         </div>
-      </div>
-      <div class="proj-info compact">
-        <h3 class="proj-name">Project 06</h3>
-        <div class="proj-info-r mono"><span class="dim">2026</span><span class="proj-cta">↗</span></div>
-      </div>
-    </a>
+      </a>
+
+    </div>
+
+    <!-- Separator — front-end / visual work below -->
+    <div class="work-divider mono" aria-hidden="true">
+      <span class="work-divider-line"></span>
+      <span class="dim">front-end · shipped &amp; live</span>
+      <span class="work-divider-line"></span>
+    </div>
+
+    <!-- Front-end projects — full visual cards, unchanged -->
+    <div class="work-visual-grid">
+
+      <!-- Project 04 -->
+      <a class="proj proj-gif" href="https://serenityuk.netlify.app/" target="_blank" rel="noopener noreferrer" data-tilt>
+        <div class="proj-frame">
+          <div class="proj-tag mono">
+            <span class="proj-num">P / 04</span>
+            <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
+          </div>
+          <div class="proj-art proj-art-04">
+            <img src="uploads/proj2.gif" alt="Serenity wellness app marketing site demo" class="proj-screenshot" loading="lazy" decoding="async" />
+            <div class="ph-corner tl" aria-hidden="true"></div>
+            <div class="ph-corner br" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="proj-info proj-info-stack">
+          <div class="proj-info-l">
+            <h3 class="proj-name">Serenity</h3>
+            <p class="proj-desc">Mobile app launch campaign for a mindfulness &amp; wellness platform — scroll-driven marketing site built to drive downloads.</p>
+            <div class="proj-stack" aria-label="Tech stack">
+              <span class="proj-stack-icon" title="React"><iconify-icon icon="simple-icons:react" width="14" height="14"></iconify-icon><span>React</span></span>
+              <span class="proj-stack-icon" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="14" height="14"></iconify-icon><span>Next.js</span></span>
+              <span class="proj-stack-icon" title="Tailwind CSS"><iconify-icon icon="simple-icons:tailwindcss" width="14" height="14"></iconify-icon><span>Tailwind</span></span>
+              <span class="proj-stack-icon" title="Figma"><iconify-icon icon="simple-icons:figma" width="14" height="14"></iconify-icon><span>Figma</span></span>
+            </div>
+          </div>
+          <div class="proj-info-r mono"><span class="dim">2025</span><span class="proj-cta">↗</span></div>
+        </div>
+      </a>
+
+      <!-- Project 05 -->
+      <a class="proj proj-gif" href="https://www.j-certsrilanka.com/" target="_blank" rel="noopener noreferrer" data-tilt>
+        <div class="proj-frame">
+          <div class="proj-tag mono">
+            <span class="proj-num">P / 05</span>
+            <span class="proj-status"><span class="ping" aria-hidden="true"></span>live</span>
+          </div>
+          <div class="proj-art proj-art-05">
+            <img src="uploads/proj1.gif" alt="J-CERT Sri Lanka website demo" class="proj-screenshot" loading="lazy" decoding="async" />
+            <div class="ph-corner tl" aria-hidden="true"></div>
+            <div class="ph-corner br" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="proj-info proj-info-stack">
+          <div class="proj-info-l">
+            <h3 class="proj-name">J-CERT Sri Lanka</h3>
+            <p class="proj-desc">Official Sri Lanka portal for Japan's J-CERT professional certification exam — registration, resources &amp; results.</p>
+            <div class="proj-stack" aria-label="Tech stack">
+              <span class="proj-stack-icon" title="Next.js"><iconify-icon icon="simple-icons:nextdotjs" width="14" height="14"></iconify-icon><span>Next.js</span></span>
+              <span class="proj-stack-icon" title="TypeScript"><iconify-icon icon="simple-icons:typescript" width="14" height="14"></iconify-icon><span>TypeScript</span></span>
+              <span class="proj-stack-icon" title="Tailwind CSS"><iconify-icon icon="simple-icons:tailwindcss" width="14" height="14"></iconify-icon><span>Tailwind</span></span>
+              <span class="proj-stack-icon" title="PostgreSQL"><iconify-icon icon="simple-icons:postgresql" width="14" height="14"></iconify-icon><span>PostgreSQL</span></span>
+            </div>
+          </div>
+          <div class="proj-info-r mono"><span class="dim">2025</span><span class="proj-cta">↗</span></div>
+        </div>
+      </a>
+
+    </div>
 
   </div>
 
@@ -399,9 +403,99 @@
       <span>got a project? let's talk</span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <div class="mono dim">// 06 of 12 shown · the rest is on request</div>
+    <div class="mono dim">// all 5 shown</div>
   </div>
 </section>
+
+<!-- ============================================================ -->
+<!-- CASE STUDY MODAL — Azure Cost Rescue                         -->
+<!-- ============================================================ -->
+<dialog class="case-modal" id="azure-case-modal" aria-labelledby="azure-case-title">
+  <div class="case-modal-inner">
+    <button type="button" class="case-modal-close" data-modal-close aria-label="Close case study">×</button>
+
+    <div class="case-modal-tag mono dim">
+      <span>P / 01</span>
+      <span class="proj-status"><span class="dot-accent" aria-hidden="true"></span>case study</span>
+    </div>
+    <h3 id="azure-case-title" class="case-modal-title">Azure Cost Rescue</h3>
+    <p class="case-modal-subtitle mono dim">Cloud cost engineering · anonymized client engagement</p>
+
+    <div class="case-modal-meta-grid">
+      <div><span class="dim">role</span> Cloud engineering: diagnosis, refactor, handover</div>
+      <div><span class="dim">timeline</span> <span class="case-modal-confirm">[confirm: e.g. ~3 weeks, part-time]</span></div>
+      <div><span class="dim">stack</span> Azure · Azure DevOps · Docker · SQL</div>
+      <div><span class="dim">outcome</span> ~59% monthly spend reduction · ~$20K/year · zero capacity loss</div>
+    </div>
+
+    <div class="case-modal-chart proj-art-minimal" aria-hidden="true">
+      <div class="ph-grid-mini"></div>
+      <div class="ph-corner tl"></div>
+      <div class="ph-corner br"></div>
+      <div class="proj-art-stat">
+        <span class="proj-art-stat-num">−59<span class="proj-art-stat-suffix">%</span></span>
+        <span class="proj-art-stat-label mono">monthly cloud spend</span>
+      </div>
+    </div>
+
+    <div class="case-modal-body">
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ the one-liner</div>
+        <p class="case-modal-desc">An enterprise Azure tenant had drifted to ~$2,900/month with no clear owner for most of the bill. I mapped every dollar to a purpose, right-sized what was over-provisioned, and put governance in place so it wouldn't creep back. Spend landed at ~$1,200/month — a ~59% cut — with no loss of capacity or reliability.</p>
+      </div>
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ the situation</div>
+        <p class="case-modal-desc">The tenant had grown the way most do: organically, under delivery pressure, with each new service provisioned for "whatever's safe" and nobody circling back once the deadline passed. By the time it reached me, the monthly bill had roughly <span class="case-modal-confirm">[confirm: doubled over ~X months]</span> and no single person could account for more than a fraction of it. That's the real problem with cloud cost — it's rarely one catastrophic mistake, it's a hundred defensible small decisions that never got revisited. The bill wasn't broken. The feedback loop was.</p>
+      </div>
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ diagnosis: what was actually wrong</div>
+        <p class="case-modal-desc">I started in Cost Management and refused to touch anything until every meaningful line item had an owner and a reason. Three patterns accounted for most of the waste:</p>
+        <ul class="case-modal-list">
+          <li><strong>Compute sized for a peak that never came.</strong> The database tier <span class="case-modal-confirm">[confirm: which — e.g. an elastic pool / vCore-based SQL]</span> was provisioned for a worst-case load that showed up a few hours a week, if that. The tenant was paying 24/7 for headroom used single-digit percentages of the time.</li>
+          <li><strong>A network topology optimized for convenience, not cost.</strong> Resources were laid out to be easy to wire together, which quietly generated avoidable egress and a couple of redundant components that duplicated work already done elsewhere.</li>
+          <li><strong>A CI/CD pipeline that leaked.</strong> Build agents and ephemeral environments were spun up per run and <span class="case-modal-confirm">[confirm: not consistently torn down]</span>, so short-lived infrastructure was being billed as if it were permanent.</li>
+        </ul>
+        <p class="case-modal-desc">None of these are exotic. That's the point — the value wasn't in finding something clever, it was in being the person who actually went line by line and asked "does this still need to exist, at this size?"</p>
+      </div>
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ approach</div>
+        <p class="case-modal-desc">My rule going in: no reliability sacrificed for the number. It's easy to slash a cloud bill by under-provisioning and creating an outage six weeks later — that's not a win, it's a deferred incident. So every change had to survive the real peak, not the average. I sized to observed usage plus a defensible margin, and I changed one class of thing at a time so I could attribute any regression to a specific move rather than guessing.</p>
+      </div>
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ the work</div>
+        <ul class="case-modal-list">
+          <li>Right-sized the data tier to real usage with scaling configured for the genuine peaks, so the headroom is there when it's actually needed and not paid for when it isn't.</li>
+          <li>Refactored the network topology to cut avoidable egress and remove the redundant components, keeping the paths that mattered and deleting the ones that only existed out of habit.</li>
+          <li>Tightened the pipeline so ephemeral resources die when the job does — build infrastructure that exists for the length of a run and no longer.</li>
+          <li>Instrumented the outcome so cost is now visible per owner, not a single opaque number at month-end.</li>
+        </ul>
+      </div>
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ outcome</div>
+        <p class="case-modal-desc">Monthly spend dropped from ~$2,900 to ~$1,200 — roughly a 59% reduction, on the order of $20K/year — with no loss of capacity and no reliability regression <span class="case-modal-confirm">[confirm: add any real before/after signal, e.g. "query p95 latency unchanged"]</span>. More importantly, the tenant came out of it legible: someone can now look at the bill and know what each part is for.</p>
+      </div>
+
+      <div class="case-modal-section">
+        <div class="case-modal-section-head mono">/ keeping it down</div>
+        <p class="case-modal-desc">The refactor is the easy half. The half that lasts is governance, so the same drift doesn't happen again in six months: cost mapped to owners, a budget with alerts, and the expectation that provisioning gets revisited rather than set-and-forgotten. A cost rescue that isn't paired with a feedback loop just resets the clock — this one closed the loop.</p>
+      </div>
+
+    </div>
+
+    <div class="proj-stack" aria-label="Tech stack">
+      <span class="proj-stack-icon" title="Microsoft Azure"><iconify-icon icon="simple-icons:microsoftazure" width="14" height="14"></iconify-icon><span>Azure</span></span>
+      <span class="proj-stack-icon" title="Azure DevOps"><iconify-icon icon="simple-icons:azuredevops" width="14" height="14"></iconify-icon><span>Azure DevOps</span></span>
+      <span class="proj-stack-icon" title="Docker"><iconify-icon icon="simple-icons:docker" width="14" height="14"></iconify-icon><span>Docker</span></span>
+      <span class="proj-stack-icon" title="SQL"><iconify-icon icon="simple-icons:microsoftsqlserver" width="14" height="14"></iconify-icon><span>SQL</span></span>
+    </div>
+  </div>
+</dialog>
 
 <!-- ============================================================ -->
 <!-- SKILLS                                                       -->
@@ -633,20 +727,20 @@
 
     <div class="contact-grid">
       <a href="mailto:supunseneviratne@gmail.com" class="contact-cell">
-        <div class="contact-cell-label mono">/ email</div>
-        <div class="contact-cell-value">supunseneviratne@<br/>gmail.com</div>
+        <div class="contact-cell-label mono"><iconify-icon icon="mdi:email-outline" width="16" height="16"></iconify-icon> email</div>
+        <div class="contact-cell-value">supunseneviratne@gmail.com</div>
       </a>
-      <a href="https://www.linkedin.com/in/supun-seneviratne-a9331125b/" target="_blank" rel="noopener noreferrer" class="contact-cell">
-        <div class="contact-cell-label mono">/ linkedin</div>
-        <div class="contact-cell-value">/in/supun-<br/>seneviratne</div>
+      <a href="https://www.linkedin.com/in/supunse" target="_blank" rel="noopener noreferrer" class="contact-cell">
+        <div class="contact-cell-label mono"><iconify-icon icon="simple-icons:linkedin" width="16" height="16"></iconify-icon> linkedin</div>
+        <div class="contact-cell-value">www.linkedin.com/in/supunse</div>
       </a>
       <a href="tel:+94703247645" class="contact-cell">
-        <div class="contact-cell-label mono">/ phone</div>
-        <div class="contact-cell-value">+94 70 324<br/>76 45</div>
+        <div class="contact-cell-label mono"><iconify-icon icon="mdi:phone-outline" width="16" height="16"></iconify-icon> phone</div>
+        <div class="contact-cell-value">+94-703247645</div>
       </a>
-      <a href="https://github.com/supun-s" target="_blank" rel="noopener noreferrer" class="contact-cell">
-        <div class="contact-cell-label mono">/ github</div>
-        <div class="contact-cell-value">@supun-s<br/><span class="dim">(soon™)</span></div>
+      <a href="https://github.com/Zive2001/" target="_blank" rel="noopener noreferrer" class="contact-cell">
+        <div class="contact-cell-label mono"><iconify-icon icon="simple-icons:github" width="16" height="16"></iconify-icon> github</div>
+        <div class="contact-cell-value">github.com/Zive2001</div>
       </a>
     </div>
   </div>

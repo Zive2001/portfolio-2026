@@ -51,6 +51,15 @@ All changes made to the design prototype after initial implementation.
 ### Project 01 — restored to placeholder
 - Reverted to placeholder art after J-CERT was moved to P/05
 
+### Selected work — filled out to 5 real projects, zero placeholders
+- Removed all remaining stand-in cards (old Project 01/02/03/06) and replaced with real content; Serenity (P/04) and J-CERT (P/05) left byte-for-byte untouched.
+- **P/01 — Azure Cost Rescue** (feature card): converted from a dead `href="#"` anchor to a `<button data-modal-open="azure-case-modal">` that opens an on-site case-study `<dialog>` — no external link, no "live" badge. Status badge is "case study" (`.dot-accent` + text). Stack row: Azure, Azure DevOps, Docker, SQL.
+- **P/02 — Fluxbridge** (half card, new): event-driven ERP/SAP integration layer. Links out to `https://github.com/Zive2001/fluxbridge` in a new tab. Status badge "open source".
+- **P/03 — Pulse** (half card, new): realtime logistics-ops dashboard. Links out to `https://github.com/Zive2001/pulse` in a new tab. Status badge "open source".
+- Added a working category filter (`all` / `live` / `open source` / `case study`) to the `work-meta` row — pure vanilla JS, derives each card's category from its existing status badge markup (no new data attributes needed, so Serenity/J-CERT stayed untouched).
+- `showing X / 5` counter now updates live with the filter; removed the static "06 of 12 shown · the rest is on request" footer line (replaced with "// all 5 shown" — no hidden remainder).
+- New case-study modal (`dialog.case-modal`) matches the site's dark/mono aesthetic; closes via the × button, backdrop click, or native `Esc`.
+
 ---
 
 ## Assets added to `uploads/`
